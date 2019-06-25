@@ -48,6 +48,19 @@ namespace BeautyForestAgent
             VisibleChange(true);
         }
 
+        private void 수정ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewMethod();
+
+        }
+
+        private void NewMethod()
+        {
+            this.statusMessage.Text = "모달 창을 띄웁니다.";
+            FormAdd m = new FormAdd();
+            m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
     }
 
 }
