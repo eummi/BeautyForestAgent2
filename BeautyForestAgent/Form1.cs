@@ -50,16 +50,48 @@ namespace BeautyForestAgent
 
         private void 수정ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewMethod();
+            ModifyModal();
+        }
+
+        private void ModifyModal()
+        {
+            this.statusMessage.Text = "모달 창을 띄웁니다.";
+            FormModify m = new FormModify();
+            m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
+
+        private void 추가ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddModal();
 
         }
 
-        private void NewMethod()
+        private void AddModal()
         {
             this.statusMessage.Text = "모달 창을 띄웁니다.";
             FormAdd m = new FormAdd();
             m.Title = "모달 창띄우기";
             m.ShowDialog();
+        }
+
+        private void 이프로그램은ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.statusMessage.Text = "모달리스 창을 띄웁니다.";
+            FormAbout m = new FormAbout();
+            m.Title = "모달리스 창띄우기";
+            m.Show();
+
+        }
+
+        private void BtnModify_Click(object sender, EventArgs e)
+        {
+            ModifyModal();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            AddModal();
         }
     }
 
